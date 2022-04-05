@@ -1,7 +1,6 @@
 # imports
 from pickle import TRUE
 from time import time
-from turtle import width
 import pygame
 import os
 import time
