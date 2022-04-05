@@ -158,11 +158,13 @@ def main():
             enemy.move(enemy_vel)
 
             if collide(enemy, player):
-                enemies.remove(enemy)
+                if len(enemies) != 0:
+                    enemies.remove(enemy)
 
             if enemy.y + enemy.get_height() - 35 > HEIGHT:
                 lives -= 1
-                enemies.remove(enemy)
+                if len(enemies) != 0 and enemy in enemies:
+                    enemies.remove(enemy)
         
 
 def menu():
